@@ -6,8 +6,14 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Quote;
 use App\Models\Category;
+
+
 class QuotesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(){
         
         $quotes = Quote::where('deleted', 0)->get();
@@ -32,8 +38,21 @@ class QuotesController extends Controller
         ]);
         
          Quote::create($data);
-         
-    return redirect()->route('quotes.index');;
+//       session()->flash('message-type', 'success');
+//       session()->flash('message-text', 'Successfully created quote!!!');
+       
+           $html = '
+                
+                    <div class="card-body messages-success">
+                        Successfully added quote!!!
+                    </div>
+              
+            ';
+                
+        
+        
+        return $html;
+   // return redirect()->route('quotes.index');;
     
     }
      public function selectedCategory(Category $category)

@@ -10,6 +10,7 @@
             <file>file:/C:/quotes/app/Http/Controllers/Frontend/CategoriesController.php</file>
             <file>file:/C:/quotes/resources/views/frontend/quotes/edit.blade.php</file>
             <file>file:/C:/quotes/database/migrations/2019_04_11_105049_alter_quotes_table.php</file>
+            <file>file:/C:/quotes/app/Http/Controllers/HomeController.php</file>
             <file>file:/C:/quotes/routes/web.php</file>
             <file>file:/C:/quotes/app/Models/User.php</file>
             <file>file:/C:/quotes/app/Http/Controllers/Frontend/IndexController.php</file>
@@ -18,8 +19,10 @@
             <file>file:/C:/quotes/resources/lang/en/users.php</file>
             <file>file:/C:/quotes/database/migrations/2014_10_12_000000_create_users_table.php</file>
             <file>file:/C:/quotes/database/migrations/2019_04_09_085249_create_categories_table.php</file>
+            <file>file:/C:/quotes/app/Http/Middleware/CheckForMaintenanceMode.php</file>
             <file>file:/C:/quotes/app/Http/Controllers/UsersController.php</file>
             <file>file:/C:/quotes/database/seeds/UsersTableSeeder.php</file>
+            <file>file:/C:/quotes/database/migrations/2019_04_12_062634_alter_users_table.php</file>
             <file>file:/C:/quotes/resources/views/frontend/categories/index.blade.php</file>
             <file>file:/C:/quotes/config/app.php</file>
             <file>file:/C:/quotes/resources/views/frontend/quotes/create.blade.php</file>
@@ -30,11 +33,14 @@
             <file>file:/C:/quotes/database/seeds/CategoriesTableSeeder.php</file>
             <file>file:/C:/quotes/app/Models/Quote.php</file>
             <file>file:/C:/quotes/database/migrations/2019_04_11_155005_users_table.php</file>
+            <file>file:/C:/quotes/app/Http/Controllers/Auth/ResetPasswordController.php</file>
             <file>file:/C:/quotes/resources/views/frontend/layout/main.blade.php</file>
             <file>file:/C:/quotes/app/Http/Controllers/Frontend/QuotesController.php</file>
+            <file>file:/C:/quotes/app/Http/Kernel.php</file>
             <file>file:/C:/quotes/public/css/custom.css</file>
             <file>file:/C:/quotes/resources/views/admin/users/register.blade.php</file>
             <file>file:/C:/quotes/resources/lang/en/auth.php</file>
+            <file>file:/C:/quotes/app/Http/Middleware/Authenticate.php</file>
             <file>file:/C:/quotes/resources/views/frontend/index/index.blade.php</file>
             <file>file:/C:/quotes/resources/views/admin/users/login.blade.php</file>
             <file>file:/C:/quotes/app/Http/Controllers/Auth/LoginController.php</file>

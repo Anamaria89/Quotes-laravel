@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
+   
+    
     public function login(){
         
         if(request()->isMethod('post')){

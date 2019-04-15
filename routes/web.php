@@ -18,7 +18,7 @@ Route::get('/', 'Frontend\IndexController@index')->name('home');
 Route::any('/login', 'UsersController@login')->name('login');
 Route::get('/register', 'UsersController@create')->name('createuser');
 Route::post('/register', 'UsersController@register')->name('register');
-Route::get('/logout', 'UsersController@logout')->name('logout');
+Route::any('/logout', 'UsersController@logout')->name('logout');
 
 //END AUTH
 

@@ -6,6 +6,13 @@
 
 @section('custom-css')
 <!-- Custom styles for this page -->
+<style>
+  .messages-success {
+      color: darkred;
+      border-left: 2px solid darkred;
+      margin-bottom: 10px;
+  }  
+</style>
 
 @endsection
 
@@ -13,7 +20,10 @@
 <div class="container">
     <h3 class="col-md-6 offset-md-3 text-center pb-4 pt-3">Add Your Quote!</h3>
     <div class="col-md-6 offset-md-3 pl-0">
-        <form action="{{ route('quotes.store') }}" method="post" >
+        <div id='errors-wrapper'>
+        
+        </div>
+        <form id="createForm" action="{{ route('quotes.store') }}" method="post" >
             @csrf
             <div class="form-group">
 
@@ -53,14 +63,46 @@
                 @endif
             </div>
             <div class="form-group ">
-                <button type='submit' class="btn btn-primary">Save</button>
+                <button type='submit' id="save" class="btn btn-primary">Save</button>
             </div>
         </form>
     </div>
 </div>
 @endsection
-
+ 
 @section('custom-js')
-<!-- Custom styles for this page -->
 
+<!-- Custom styles for this page -->
+<script
+  src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+  crossorigin="anonymous"></script>
+<script>
+
+$(document).ready(function() {
+    $('#save').on('click', function(e){
+        e.preventDefault();
+        $.ajax({
+            url: "{{ route('quotes.store') }}",
+            type: 'post',
+            data: {
+                'category_id': $('form [name=category_id]').val(),
+                'text': $('form [name=text]').val(),
+                 'author': $('form [name=author]').val(),
+                '_token' : $('form [name=_token]').val()
+
+            },
+            dataType: 'html'
+        }).done(function(data){
+           //alert('Data sent');
+            $('#errors-wrapper').html(data);
+        }).fail(function(jqXHR, error, message){
+//            alert(message);
+           alert('Data not sent');
+        }).always(function(){
+            
+        });
+    });
+});
+</script>
 @endsection
